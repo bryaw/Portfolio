@@ -14,6 +14,7 @@ const TAB_DATA = [
                 <li>- VueJS</li>
                 <li>- React Native</li>
                 <li>- PHP</li>
+                <li>- Tailwind CSS</li>
                 <li>- HTML/CSS</li>
             </ul>
         )

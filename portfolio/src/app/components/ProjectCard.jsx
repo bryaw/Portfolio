@@ -5,8 +5,8 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl}) => {
   return (
     <div className=" mb-8">
         <div 
-            className=" h-52 md:h-72 w-64 md:w-80 rounded-t-xl relative group" 
-            style={{ background: `url(${imgUrl})`, backgrounSize: "cover" }}
+            className=" h-48 w-72 rounded-t-xl relative group" 
+            style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
         >
             <div className=" gap-4 items-center justify-center overlay absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500">
                 <Link 
@@ -23,7 +23,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl}) => {
                 </Link>
             </div>
         </div>
-        <div className=" text-white rounded-b-xl bg-[#181818] py-6 px-4 ">
+        <div className=" text-white rounded-b-xl bg-black py-2 px-4 ">
             <h5 className=" text-xl font-semibold mb-2">{title}</h5>
             <p className=" tetx-[#ADB7BE]">{description}</p>
         </div>

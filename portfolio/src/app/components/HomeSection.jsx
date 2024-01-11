@@ -36,13 +36,13 @@ const HomeSection = () => {
                 </div>
             </div>
             <div className=" col-span-5 place-self-center mt-6 lg:mt-0">
-                <div className="bg-gray-900 rounded-full relative w-[200px] h-[200px] lg:w-[300px] lg:h-[300px]">
+                <div className="bg-gray-900 rounded-full relative w-[250px] h-[250px] sm:h-260 sm:w-260 lg:w-[270px] lg:h-[270px]">
                     <Image
                         className=" rounded-full absolute trasnform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                         src="/images/bryan.png"
                         alt="my image"
-                        height={250}
-                        width={250}
+                        height={225}
+                        width={225}
                     />
                 </div>
             </div>
