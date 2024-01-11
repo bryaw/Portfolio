@@ -6,7 +6,7 @@ import { TypeAnimation } from 'react-type-animation';
 const HomeSection = () => {
 
   return (
-    <section>
+    <section className="">
         <div className=" grid grid-cols-1 sm:grid-cols-12">
             <div className=" col-span-7 place-self-center text-center sm:text-left">
                 <h1 className=" text-white text-2xl lg:text-4xl font-bold">
@@ -25,7 +25,7 @@ const HomeSection = () => {
                         repeat={Infinity}
                     />
                 </h1>
-                <p className=" text-[#ADB7BE] text-base sm:text-lg lg:text-xl mt-2 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <p className=" text-[#ADB7BE] text-sm sm:text-base lg:text-lg mt-2 mb-6">Front End Developer who specializes in creating web applications and translating visual concepts into interactive user interfaces.</p>
                 <div className=" flex flex-row gap-2 mt-2">
                     <button className=" text-white w-full sm:fit px-6 py-3 rounded-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 hover:from-blue-500 border border-white">
                         Hire Me
@@ -51,4 +51,4 @@ const HomeSection = () => {
   )
 }
 
-export default HomeSection
+export default HomeSection;

@@ -17,7 +17,7 @@ const NavigationLinks = [
         title: "Contact",
         path: "",
     },
-]
+];
 
 const Navigation = () => {
 
