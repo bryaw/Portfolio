@@ -8,15 +8,21 @@ const TAB_DATA = [
         title: "Skills",
         id: "skills",
         content: (
-            <ul>
-                <li>- Javascript</li>
-                <li>- NextJS</li>
-                <li>- VueJS</li>
-                <li>- React Native</li>
-                <li>- PHP</li>
-                <li>- Tailwind CSS</li>
-                <li>- HTML/CSS</li>
-            </ul>
+            <div className=" flex flex-row gap-6"> 
+                <ul>
+                    <li>- Javascript</li>
+                    <li>- NextJS</li>
+                    <li>- VueJS</li>
+                </ul>
+                <ul>
+                    <li>- PHP</li>
+                    <li>- Tailwind CSS</li>
+                    <li>- HTML/CSS</li>
+                </ul>
+                <ul>
+                    <li>- React Native</li>
+                </ul>
+            </div>
         )
     },
     {
@@ -24,7 +30,7 @@ const TAB_DATA = [
         id: "education",
         content: (
             <ul>
-                <li>- Web Development</li>
+                <li><span className=" text-purple-500">-</span> Web Development</li>
                 <li>- Computer Programming</li>
             </ul>
         )
@@ -62,8 +68,8 @@ const AboutSection = () => {
                 alt="computer setup"
             />
             <div className=" mt-4 md:mt-0 text-left flex flex-col h-full">
-                <h2 className=" text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500">About Me</h2>
-                <p className=" text-sm text-white">
+                <h2 className=" text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">About Me</h2>
+                <p className=" text-sm text-[#ADB7BE]">
                 I'm passionate about crafting intuitive and visually appealing digital experiences. I thrive on turning ideas into responsive websites and applications using Javascript and Frameworks. Collaborating with diverse teams fuels my creativity, and I'm constantly exploring new frameworks and trends to stay at the forefront of modern UI/UX. When not coding, I indulge in exploring development tools, sketching interface ideas, and diving into design methodologies.
                 </p>
                 <div className=" flex flex-row mt-8 gap-4">
