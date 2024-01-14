@@ -2,26 +2,25 @@
 import React, { useTransition, useState } from 'react';
 import Image from 'next/image';
 import TabButton from './TabButton';    
+import { TypeAnimation } from 'react-type-animation';
 
 const TAB_DATA = [
     {
         title: "Skills",
         id: "skills",
         content: (
-            <div className=" flex flex-row gap-6"> 
-                <ul>
-                    <li>- Javascript</li>
-                    <li>- NextJS</li>
-                    <li>- VueJS</li>
-                </ul>
-                <ul>
-                    <li>- PHP</li>
-                    <li>- Tailwind CSS</li>
-                    <li>- HTML/CSS</li>
-                </ul>
-                <ul>
-                    <li>- React Native</li>
-                </ul>
+            <div className=" flex flex-row gap-6">
+                <TypeAnimation
+                    style={{ whiteSpace: 'pre-line', height: '195px', display: 'block' }}
+                    sequence={[
+                        '- Javascript \n- Next Js \n- Vue Js \n- PHP \n- Tailwind CSS \n- HTML/CSS \n- Raect Native',
+                        2000,
+                    ]}
+                    wrapper="span"
+                    speed={70}
+                    cursor={false}
+                    repeat={Infinity}
+                />
             </div>
         )
     },
@@ -29,20 +28,34 @@ const TAB_DATA = [
         title: "Education",
         id: "education",
         content: (
-            <ul>
-                <li><span className=" text-purple-500">-</span> Web Development</li>
-                <li>- Computer Programming</li>
-            </ul>
+            <TypeAnimation
+                style={{ whiteSpace: 'pre-line', height: '195px', display: 'block' }}
+                sequence={[
+                    '- Web Development \n- Computer Programming',
+                    2000,
+                ]}
+                wrapper="span"
+                speed={70}
+                cursor={false}
+                repeat={Infinity}
+            />
         )
     },
     {
         title: "Experience",
         id: "experience",
         content: (
-            <ul>
-                <li>- Web Development</li>
-                <li>- Mobile Development "IOS/Android"</li>
-            </ul>
+            <TypeAnimation
+                style={{ whiteSpace: 'pre-line', height: '195px', display: 'block' }}
+                sequence={[
+                    '- Web Development \n- Computer Programming',
+                    2000,
+                ]}
+                wrapper="span"
+                speed={70}
+                cursor={false}
+                repeat={Infinity}
+            />
         )
     }
 ];
@@ -80,7 +93,7 @@ const AboutSection = () => {
             >
                 <h2 className=" text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">About Me</h2>
                 <p className=" text-sm text-[#ADB7BE]">
-                I'm passionate about crafting intuitive and visually appealing digital experiences. I thrive on turning ideas into responsive websites and applications using Javascript and Frameworks. Collaborating with diverse teams fuels my creativity, and I'm constantly exploring new frameworks and trends to stay at the forefront of modern UI/UX. When not coding, I indulge in exploring development tools, sketching interface ideas, and diving into design methodologies.
+                    I'm passionate about crafting intuitive and visually appealing digital experiences. I thrive on turning ideas into responsive websites and applications using Javascript and Frameworks. Collaborating with diverse teams fuels my creativity, and I'm constantly exploring new frameworks and trends to stay at the forefront of modern UI/UX. When not coding, I indulge in exploring development tools, sketching interface ideas, and diving into design methodologies.
                 </p>
                 <div className=" flex flex-row mt-8 gap-4">
                     <TabButton 

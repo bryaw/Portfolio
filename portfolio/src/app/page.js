@@ -4,6 +4,7 @@ import HomeSection from './components/HomeSection';
 import Navigation from './components/Navigation';
 import AboutSection from './components/AboutSection';
 import ProjectSection from './components/ProjectSection';
+import EmailSection from './components/EmailSection';
 import Footer from './components/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -25,6 +26,7 @@ export default function Home() {
         <HomeSection />
         <AboutSection />
         <ProjectSection />
+        <EmailSection />
         <Footer />
       </div>
       <BackTopButton />

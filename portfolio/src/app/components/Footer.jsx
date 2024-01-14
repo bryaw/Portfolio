@@ -7,7 +7,7 @@ const Footer = () => {
     const formattedDate = currentDate.getFullYear();
     
   return (
-    <nav className=" mt-36 -mb-4 border-t border-slate-900">
+    <nav className=" mt-16 -mb-4 border-t border-slate-900">
         <span className=" flex flex-wrap items-center justify-center px-6 py-4 text-center">
             <Image
                 src="/images/logo.png" 
