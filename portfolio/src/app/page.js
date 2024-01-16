@@ -22,13 +22,11 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-black">
       <Navigation />
-      <div class="container mx-auto px-12 py-4 mt-40">
-        <HomeSection />
-        <AboutSection />
-        <ProjectSection />
-        <EmailSection />
-        <Footer />
-      </div>
+      <HomeSection />
+      <AboutSection />
+      <ProjectSection />
+      <EmailSection />
+      <Footer />
       <BackTopButton />
     </main>
   )

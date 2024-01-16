@@ -46,7 +46,7 @@ const filteredProjects = PROJECT_DATA.filter((project) =>
 );
 
   return (
-    <div className=" mt-28">
+    <div className=" h-full py-20 px-12">
         <h1 className=" mb-10 text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
             My Projects
         </h1>

@@ -26,7 +26,7 @@ const BackTopButton = () => {
 
   return (
     <button
-      className={`fixed bottom-6 right-6 bg-gradient-to-r from-purple-700 to-pink-700 px-2 py-2 rounded ${
+      className={`fixed bottom-20 right-6 bg-gradient-to-r from-purple-700 to-pink-700 px-2 py-2 rounded ${
         isVisible ? 'block' : 'hidden'
       }`}
       onClick={scrollToTop}

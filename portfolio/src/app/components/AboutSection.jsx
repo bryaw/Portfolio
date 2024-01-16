@@ -13,7 +13,7 @@ const TAB_DATA = [
                 <TypeAnimation
                     style={{ whiteSpace: 'pre-line', height: '195px', display: 'block' }}
                     sequence={[
-                        '- Javascript \n- Next Js \n- Vue Js \n- PHP \n- Tailwind CSS \n- HTML/CSS \n- Raect Native',
+                        '- Javascript \n- Next Js \n- Vue Js \n- React Native \n- PHP \n- Tailwind CSS \n- HTML/CSS',
                         2000,
                     ]}
                     wrapper="span"
@@ -25,13 +25,13 @@ const TAB_DATA = [
         )
     },
     {
-        title: "Education",
-        id: "education",
+        title: "Experience",
+        id: "experience",
         content: (
             <TypeAnimation
                 style={{ whiteSpace: 'pre-line', height: '195px', display: 'block' }}
                 sequence={[
-                    '- Web Development \n- Computer Programming',
+                    '- Web Development \n- Mobile Application',
                     2000,
                 ]}
                 wrapper="span"
@@ -42,20 +42,10 @@ const TAB_DATA = [
         )
     },
     {
-        title: "Experience",
-        id: "experience",
+        title: "Education",
+        id: "education",
         content: (
-            <TypeAnimation
-                style={{ whiteSpace: 'pre-line', height: '195px', display: 'block' }}
-                sequence={[
-                    '- Web Development \n- Computer Programming',
-                    2000,
-                ]}
-                wrapper="span"
-                speed={70}
-                cursor={false}
-                repeat={Infinity}
-            />
+            "- Web Development"
         )
     }
 ];
@@ -72,20 +62,22 @@ const AboutSection = () => {
     };
 
   return (
-    <section className=" text-white mt-36">
-        <div className=" md:grid md:grid-cols-2 gap-10 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-            <Image
-                data-aos="fade-right" 
-                data-aos-offset="200" 
-                data-aos-delay="50" 
-                data-aos-duration="1000"
-                src="/images/about.jpg" 
-                height={500} 
-                width={500} 
-                alt="computer setup"
-            />
+    <section className=" px-12 text-white py-16">
+        <div className=" md:grid md:grid-cols-2 gap-10 items-center py-10 px-4 xl:gap-16 sm:py-16 xl:px-16">
+            <div className=" h-full flex items-center justify-center">
+                <Image
+                    data-aos="fade-right" 
+                    data-aos-offset="200" 
+                    data-aos-delay="50" 
+                    data-aos-duration="1000"
+                    src="/images/about.jpg" 
+                    height={500} 
+                    width={500} 
+                    alt="computer setup"
+                />
+            </div>
             <div 
-                className=" mt-4 md:mt-0 text-left flex flex-col h-full"
+                className=" md:mt-0 text-left flex flex-col h-full"
                 data-aos="fade-left" 
                 data-aos-offset="200" 
                 data-aos-delay="50" 
@@ -93,7 +85,7 @@ const AboutSection = () => {
             >
                 <h2 className=" text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">About Me</h2>
                 <p className=" text-sm text-[#ADB7BE]">
-                    I'm passionate about crafting intuitive and visually appealing digital experiences. I thrive on turning ideas into responsive websites and applications using Javascript and Frameworks. Collaborating with diverse teams fuels my creativity, and I'm constantly exploring new frameworks and trends to stay at the forefront of modern UI/UX. When not coding, I indulge in exploring development tools, sketching interface ideas, and diving into design methodologies.
+                    I'm passionate about crafting intuitive and visually appealing digital experiences. I thrive on turning ideas into responsive websites and applications using Javascript and Frameworks.
                 </p>
                 <div className=" flex flex-row mt-8 gap-4">
                     <TabButton 
@@ -102,14 +94,14 @@ const AboutSection = () => {
                             Skills
                     </TabButton>
                     <TabButton 
-                        selectTab={() => handleTabChange("education")} 
-                        active={tab === "education"}>
-                            Education
-                    </TabButton>
-                    <TabButton 
                         selectTab={() => handleTabChange("experience")} 
                         active={tab === "experience"}>
                             Experience
+                    </TabButton>
+                    <TabButton 
+                        selectTab={() => handleTabChange("education")} 
+                        active={tab === "education"}>
+                            Education
                     </TabButton>
                 </div>
                 <div className=" mt-8">
