@@ -3,6 +3,7 @@ import React, { useTransition, useState } from 'react';
 import Image from 'next/image';
 import TabButton from './TabButton';    
 import { TypeAnimation } from 'react-type-animation';
+import { motion } from "framer-motion";
 
 const TAB_DATA = [
     {
@@ -63,7 +64,12 @@ const AboutSection = () => {
 
   return (
     <section className=" px-12 text-white py-16">
-        <div className=" md:grid md:grid-cols-2 gap-10 items-center py-10 px-4 xl:gap-16 sm:py-16 xl:px-16">
+        <motion.div
+            initial={{ opacity: 0, scale: 1}}
+            animate={{ opacity: 1, scale: 1}}
+            transition={{ duration: 0.5}}
+            className=" md:grid md:grid-cols-2 gap-10 items-center py-10 px-4 xl:gap-16 sm:py-16 xl:px-16"
+        >
             <div className=" h-full flex items-center justify-center">
                 <Image
                     data-aos="fade-right" 
@@ -83,7 +89,7 @@ const AboutSection = () => {
                 data-aos-delay="50" 
                 data-aos-duration="1000"
             >
-                <h2 className=" text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">About Me</h2>
+                <h2 className=" text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-500">About Me</h2>
                 <p className=" text-sm text-[#ADB7BE]">
                     I'm passionate about crafting intuitive and visually appealing digital experiences. I thrive on turning ideas into responsive websites and applications using Javascript and Frameworks.
                 </p>
@@ -108,7 +114,7 @@ const AboutSection = () => {
                     {TAB_DATA.find((t) => t.id === tab).content}
                 </div>
             </div>
-        </div>
+        </motion.div>
     </section>
   )
 }

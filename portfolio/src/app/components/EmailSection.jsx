@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { TypeAnimation } from 'react-type-animation';
+import { motion } from "framer-motion";
 
 const EmailSection = () => {
 
@@ -39,9 +40,14 @@ const EmailSection = () => {
     };
 
   return (
-    <section className=" grid md:grid-cols-2 my-12 md:my-12 py-24 px-24">
-        <div>
-            <h5 className=" text-xl font-bold text-transparent bg-clip-text bg-purple-600">Lets's Connect</h5>
+    <section 
+        className=" grid md:grid-cols-2 my-12 md:my-12 py-24 px-24">
+        <motion.div
+            initial={{ opacity: 0, scale: 1}} 
+            animate={{ opacity: 1, scale: 1}}
+            transition={{ duration: 0.5}}
+        >
+            <h5 className=" text-xl font-bold text-transparent bg-clip-text bg-primary-600">Lets's Connect</h5>
             <p className=" text-[#ADB7BE] mb-4 max-w-md">
                 <TypeAnimation
                     sequence={[
@@ -66,8 +72,13 @@ const EmailSection = () => {
                     </div>
                 </Link>
             </div>
-        </div>
-        <div className="">
+        </motion.div>
+        <motion.div 
+            className=""
+            initial={{ opacity: 0, scale: 1}} 
+            animate={{ opacity: 1, scale: 1}}
+            transition={{ duration: 0.5}}
+        >
             <form
                 onSubmit={handleSubmit}
                 className=" flex flex-col gap-2"
@@ -106,7 +117,7 @@ const EmailSection = () => {
                 />
                 <button
                     type="submit"
-                    className=" bg-purple-700 text-white text-sm sm:text-base lg:text-lg font-medium rounded-lg w-full mt-6 py-2 hover:bg-opacity-70" 
+                    className=" bg-primary-700 text-white text-sm sm:text-base lg:text-lg font-medium rounded-lg w-full mt-6 py-2 hover:bg-opacity-70" 
                 >
                     Send Message
                 </button>
@@ -118,7 +129,7 @@ const EmailSection = () => {
                     )
                 }
             </form>
-        </div>  
+        </motion.div>  
     </section>
   )
 }
