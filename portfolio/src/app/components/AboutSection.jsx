@@ -46,7 +46,17 @@ const TAB_DATA = [
         title: "Education",
         id: "education",
         content: (
-            "- Web Development"
+            <TypeAnimation
+                style={{ whiteSpace: 'pre-line', height: '195px', display: 'block' }}
+                sequence={[
+                    '- Web Development',
+                    2000,
+                ]}
+                wrapper="span"
+                speed={70}
+                cursor={false}
+                repeat={Infinity}
+            />
         )
     }
 ];
@@ -63,7 +73,7 @@ const AboutSection = () => {
     };
 
   return (
-    <section className=" px-12 text-white py-16">
+    <section id="about-section" className=" px-12 text-white py-16">
         <motion.div
             initial={{ opacity: 0, scale: 1}}
             animate={{ opacity: 1, scale: 1}}
@@ -89,7 +99,9 @@ const AboutSection = () => {
                 data-aos-delay="50" 
                 data-aos-duration="1000"
             >
-                <h2 className=" text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-500">About Me</h2>
+                <h2 className=" text-4xl font-bold mb-4 text-white">
+                    About Me
+                </h2>
                 <p className=" text-sm text-[#ADB7BE]">
                     I'm passionate about crafting intuitive and visually appealing digital experiences. I thrive on turning ideas into responsive websites and applications using Javascript and Frameworks.
                 </p>

@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import ProjectCard from './ProjectCard';
 import ProjectTag from './ProjectTag';
+import { motion, useInView } from "framer-motion";
 
 const PROJECT_DATA = [
     {
@@ -35,51 +36,71 @@ const PROJECT_DATA = [
 
 const ProjectSection = () => {
     
-const [tag, setTag] = useState("All");
+    const [tag, setTag] = useState("All");
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
 
-const handleTagChange = (newTag) => {
-    setTag(newTag);
-};
+    const handleTagChange = (newTag) => {
+        setTag(newTag);
+    };
 
-const filteredProjects = PROJECT_DATA.filter((project) => 
-    project.tag.includes(tag)
-);
+    const filteredProjects = PROJECT_DATA.filter((project) => 
+        project.tag.includes(tag)
+    );
+
+    const cardVariants = {
+        initial: { y: 50, opacity: 0 },
+        animate: { y: 0, opacity: 1 },
+    };
 
   return (
-    <div className=" h-full py-20 px-12">
-        <h1 className=" mb-10 text-center text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-500">
-            My Projects
-        </h1>
-        <div className=" text-white flex flex-row justify-center items-center gap-4 py-6">
-            <ProjectTag 
-                onClick={handleTagChange} 
-                name="All" 
-                isSelected={tag === "All"} 
-            />
-            <ProjectTag 
-                onClick={handleTagChange} 
-                name="Web" 
-                isSelected={tag === "Web"} 
-            />
-            <ProjectTag 
-                onClick={handleTagChange} 
-                name="Mobile" 
-                isSelected={tag === "Mobile"} 
-            />
-        </div>
-        <div className=" flex flex-wrap gap-4 items-center justify-center">
-            {filteredProjects.map((project) => 
-                <ProjectCard 
-                    key={project.id} 
-                    title={project.title} 
-                    description={project.description}
-                    imgUrl={project.image}
-                    gitUrl={project.gitUrl}
-                    previewUrl={project.previewUrl}
+    <section id="project-section">
+        <div className=" h-full py-20 px-12">
+            <h1 className=" mb-10 text-center text-3xl font-bold text-white">
+                My Projects
+            </h1>
+            <div className=" text-white flex flex-row justify-center items-center gap-4 py-6">
+                <ProjectTag 
+                    onClick={handleTagChange} 
+                    name="All" 
+                    isSelected={tag === "All"} 
                 />
-            )}
+                <ProjectTag 
+                    onClick={handleTagChange} 
+                    name="Web" 
+                    isSelected={tag === "Web"} 
+                />
+                <ProjectTag 
+                    onClick={handleTagChange} 
+                    name="Mobile" 
+                    isSelected={tag === "Mobile"} 
+                />
+            </div>
+            <ul 
+                ref={ref}
+                className=" flex flex-wrap gap-4 items-center justify-center"
+            >
+                {filteredProjects.map((project, index) => 
+                    <motion.li
+                        key={index}
+                        variants={cardVariants}
+                        initial="initial"
+                        animate={isInView ? "animate" : "initial"}
+                        transition={{ duration: 0.3, delay: index * 0.4 }}
+                    >
+                        <ProjectCard 
+                            key={project.id} 
+                            title={project.title} 
+                            description={project.description}
+                            imgUrl={project.image}
+                            gitUrl={project.gitUrl}
+                            previewUrl={project.previewUrl}
+                        />
+                    </motion.li>
+                )}
+            </ul>
         </div>
-    </div>
+    </section>
   )
 }
 

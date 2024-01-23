@@ -7,7 +7,9 @@ import { motion } from "framer-motion";
 const HomeSection = () => {
 
   return (
-    <section className=" h-full px-12"
+    <section
+        id="home-section"
+        className=" h-full px-12"
         style={{ 
             background: `url('/images/bg2.jpg')`, 
             backgroundSize: "cover",

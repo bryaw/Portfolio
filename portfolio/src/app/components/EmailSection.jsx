@@ -40,7 +40,8 @@ const EmailSection = () => {
     };
 
   return (
-    <section 
+    <section
+        id="contact-section"
         className=" grid md:grid-cols-2 my-12 md:my-12 py-24 px-24">
         <motion.div
             initial={{ opacity: 0, scale: 1}} 
