@@ -9,7 +9,7 @@ const HomeSection = () => {
   return (
     <section
         id="home-section"
-        className=" h-full px-12"
+        className=" px-12"
         style={{ 
             background: `url('/images/bg2.jpg')`, 
             backgroundSize: "cover",

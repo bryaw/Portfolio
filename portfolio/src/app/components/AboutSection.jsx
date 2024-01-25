@@ -73,15 +73,16 @@ const AboutSection = () => {
     };
 
   return (
-    <section id="about-section" className=" px-12 text-white py-16">
+    <section id="about-section" className=" px-12 py-10 text-white">
         <motion.div
             initial={{ opacity: 0, scale: 1}}
             animate={{ opacity: 1, scale: 1}}
             transition={{ duration: 0.5}}
-            className=" md:grid md:grid-cols-2 gap-10 items-center py-10 px-4 xl:gap-16 sm:py-16 xl:px-16"
+            className=" md:grid md:grid-cols-2 gap-10 items-center py-16 px-4 xl:gap-16 sm:py-16 xl:px-16"
         >
             <div className=" h-full flex items-center justify-center">
                 <Image
+                    className=" rounded-2xl"
                     data-aos="fade-right" 
                     data-aos-offset="200" 
                     data-aos-delay="50" 
@@ -99,7 +100,7 @@ const AboutSection = () => {
                 data-aos-delay="50" 
                 data-aos-duration="1000"
             >
-                <h2 className=" text-4xl font-bold mb-4 text-white">
+                <h2 className=" text-4xl font-bold mb-4 text-white mt-4">
                     About Me
                 </h2>
                 <p className=" text-sm text-[#ADB7BE]">

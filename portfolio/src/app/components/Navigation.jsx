@@ -29,7 +29,7 @@ const Navigation = () => {
 const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className=" fixed left-0 right-8 z-10 bg-[#121212] bg-opacity-100 ">
+    <nav className=" fixed left-0 right-8 z-10 bg-[#121212] w-full ">
         <div className=" flex flex-wrap items-center justify-between mx-auto px-6 py-4">
             <Image
                 src="/images/logo.png" 
