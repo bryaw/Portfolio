@@ -1,48 +1,32 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Link from 'next/link';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from "framer-motion";
+import emailjs from '@emailjs/browser';
 
 const EmailSection = () => {
 
+    const form = useRef();
     const [emailSubmitted, setEmailSubmitted] = useState(false);
 
-    const handleSubmit = async (e) => {
+    const sendEmail = (e) => {
         e.preventDefault();
-        const data ={
-            email: e.target.email.value,
-            subject: e.target.subject.value,
-            message: e.target.message.value,
-        };
-
-        const JSONdata = JSON.stringify(data);
-        const endpoint = "api/send";
-
-        const options = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSONdata,
-        }
-
-        const response = await fetch (endpoint, options);
-
-        if (response.status === 200) {
-            const resData = await response.json();
-            console.log('Message sent.');
-            setEmailSubmitted(true);
-        }
-        else {
-            console.error('Failed to send message. Status:', response.status);
-        }
+    
+        emailjs.sendForm('service_py5crwf', 'template_dpm36zj', form.current, 'SIp4_Hp7v9Y62GQsu')
+          .then((result) => {
+              console.log(result.text);
+              setEmailSubmitted(true);
+          }, (error) => {
+              console.log(error.text);
+          });
+        e.target.reset();
     };
 
   return (
     <section
         id="contact-section"
-        className=" grid md:grid-cols-2 my-12 md:my-12 py-24 px-12 bg-gradient-to-br from-slate-900 via-[#0d0d0d] to-slate-900">
+        className=" grid md:grid-cols-2 my-12 md:my-12 py-24 px-12">
         <motion.div
             initial={{ opacity: 0, scale: 1}} 
             animate={{ opacity: 1, scale: 1}}
@@ -86,15 +70,33 @@ const EmailSection = () => {
             animate={{ opacity: 1, scale: 1}}
             transition={{ duration: 0.5}}
         >
+            {/* Confirm Email Sent */}
+            {   
+                emailSubmitted && (
+                    <div className=" flex items-center justify-end">
+                        <p className=" text-sm font-bold mt-8 px-2 py-2 bg-clip-text text-transparent bg-gradient-to-br from-secondary-500 to-primary-500">
+                            Email sent successfully
+                        </p>
+                    </div>
+                )
+            }
             <form
-                onSubmit={handleSubmit}
+                ref={form}
+                onSubmit={sendEmail}
                 className=" flex flex-col gap-2"
             >
+                <input
+                    name="user_name"
+                    type="hidden" 
+                    id="name"
+                    placeholder="Juan Dela Cruz"
+                    className=" bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                />
                 <label htmlFor="email" className=" text-white block text-sm font-medium ml-2">
                     Your Email
                 </label>
                 <input
-                    name="email"
+                    name="user_email"
                     type="email" 
                     id="email" 
                     required 
@@ -116,7 +118,7 @@ const EmailSection = () => {
                     Message
                 </label>
                 <textarea 
-                    type="message" 
+                    name="message"
                     id="message" 
                     required 
                     placeholder="Enter your message here"
@@ -128,13 +130,6 @@ const EmailSection = () => {
                 >
                     Send Message
                 </button>
-
-                {/* Confirm Email Sent */}
-                {
-                    emailSubmitted && (
-                        <p className=" text-green-500 mt-8">Email sent successfully</p>
-                    )
-                }
             </form>
         </motion.div>  
     </section>

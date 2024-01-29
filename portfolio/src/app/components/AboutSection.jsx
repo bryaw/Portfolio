@@ -75,7 +75,7 @@ const AboutSection = () => {
   return (
     <section 
         id="about-section" 
-        className=" px-12 py-10 text-white bg-gradient-to-br from-slate-900 via-[#0d0d0d] to-slate-900"
+        className=" px-12 py-10 text-white"
     >
         <motion.div
             initial={{ opacity: 0, scale: 1}}

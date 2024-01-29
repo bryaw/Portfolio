@@ -9,7 +9,7 @@ const HomeSection = () => {
   return (
     <section
         id="home-section"
-        className=" px-12 bg-gradient-to-br from-[#0d0d0d] via-slate-900 to-[#0d0d0d]"
+        className=" px-12"
         style={{
             minHeight: '100vh',
             display: 'flex',
