@@ -42,7 +42,7 @@ const EmailSection = () => {
   return (
     <section
         id="contact-section"
-        className=" grid md:grid-cols-2 my-12 md:my-12 py-24 px-12">
+        className=" grid md:grid-cols-2 my-12 md:my-12 py-24 px-12 bg-gradient-to-br from-slate-900 via-[#0d0d0d] to-slate-900">
         <motion.div
             initial={{ opacity: 0, scale: 1}} 
             animate={{ opacity: 1, scale: 1}}

@@ -3,10 +3,15 @@ import Link from 'next/link';
 
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl}) => {
   return (
-    <div className=" mb-8">
+    <div className=" mb-4 ">
         <div 
-            className=" h-48 w-72 rounded-t-xl relative group" 
-            style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
+            className=" h-48 w-80 rounded-t-xl relative group" 
+            style={{ 
+                background: `url(${imgUrl})`, 
+                backgroundSize: "cover",
+                height: "150px",
+                width: "300px"
+            }}
         >
             <div className=" gap-4 items-center justify-center overlay absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500">
                 <Link 
@@ -24,8 +29,8 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl}) => {
             </div>
         </div>
         <div className=" text-white rounded-b-xl bg-black py-2 px-4 ">
-            <h5 className=" text-xl font-semibold mb-2">{title}</h5>
-            <p className=" tetx-[#ADB7BE]">{description}</p>
+            <h5 className=" text-xl font-semibold mt-2 mb-1">{title}</h5>
+            <p className=" text-[#ADB7BE] text-xs">{description}</p>
         </div>
     </div>
   )

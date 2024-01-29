@@ -8,10 +8,10 @@ const PROJECT_DATA = [
     {
         id: 1,
         title: "Ordering System",
-        description: "Web Project",
-        image: "/images/projects/p1.png",
+        description: "Online Ordering and Management System",
+        image: "/images/projects/proj1.png",
         tag: ["All", "Web"],
-        gitUrl: "/",
+        gitUrl: "https://github.com/bryaw/Ordering-System",
         previewUrl: "/",
     },
     {
@@ -55,7 +55,7 @@ const ProjectSection = () => {
 
   return (
     <section id="project-section">
-        <div className=" h-full py-20 px-12 bg-gradient-to-br from-[#0d0d0d] via-slate-900 to-[#0d0d0d]">
+        <div className=" h-full py-28 px-12 bg-gradient-to-br from-[#0d0d0d] via-slate-900 to-[#0d0d0d]">
             <h1 className=" mb-10 text-center text-3xl font-bold text-white">
                 My Projects
             </h1>
