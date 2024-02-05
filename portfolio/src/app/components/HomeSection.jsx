@@ -56,7 +56,7 @@ const HomeSection = () => {
                 </div>
             </div>
             <div className=" col-span-5 place-self-center mt-6">
-                <div className="bg-transparent rounded-full relative w-[250px] h-[250px] sm:h-260 sm:w-260 lg:w-[270px] lg:h-[270px]">
+                <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-900 to-transparent rounded-full relative w-[250px] h-[250px] sm:h-260 sm:w-260 lg:w-[270px] lg:h-[270px]">
                     <Image
                         className=" rounded-full absolute trasnform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                         src="/images/bryan.png"
@@ -65,6 +65,7 @@ const HomeSection = () => {
                         width={300}
                     />
                 </div>
+                {/* <div className=" bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-900 to-transparent absolute h-40 w-40 rounded-full right-0 top-0 blur-lg"></div> */}
             </div>
         </motion.div>
     </section>
