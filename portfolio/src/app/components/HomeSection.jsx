@@ -45,9 +45,9 @@ const HomeSection = () => {
                     Front End Developer who specializes in creating web applications and translating visual concepts into interactive user interfaces.
                 </p>
                 <div className=" flex flex-row gap-4 mt-12 ">
-                    <button className=" w-full text-white sm:fit px-6 py-3 rounded-full bg-gradient-to-br from-middle-600 via-primary-600 to-secondary-600 hover:from-middle-500">
+                    <a href="/#contact-section" className=" w-full text-white sm:fit px-6 py-3 rounded-full bg-gradient-to-br from-middle-600 via-primary-600 to-secondary-600 hover:from-middle-500">
                         Hire Me
-                    </button>
+                    </a>
                     <button className=" w-full sm:fit px-1 py-1 rounded-full bg-gradient-to-br from-middle-600 via-primary-600 to-secondary-600 hover:bg-gradient-to-br hover:from-middle-500">
                         <span className=" block bg-black hover:bg-gradient-to-br from-middle-600 via-primary-600 to-secondary-600 hover:from-blue-500 rounded-full px-5 py-2 text-white">
                             Download CV
