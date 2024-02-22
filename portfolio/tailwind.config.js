@@ -21,6 +21,7 @@ module.exports = {
       primary: colors.purple,
       secondary: colors.pink,
       middle: colors.blue,
+      text_gray: '#ADB7BE',
     },
   },
   plugins: [],
