@@ -9,7 +9,7 @@ const HomeSection = () => {
   return (
     <section
         id="home-section"
-        className=" px-12"
+        className=" px-12 w-screen"
         style={{
             minHeight: '100vh',
             display: 'flex',
@@ -23,8 +23,8 @@ const HomeSection = () => {
             transition={{ duration: 0.5}}
             className=" grid grid-cols-1 sm:grid-cols-12 py-10 sm:py-0"
         >
-            <div className=" col-span-7 place-self-center text-center sm:text-left px-10">
-                <h1 className=" text-white text-2xl lg:text-4xl font-bold mt-16">
+            <div className=" col-span-8 place-self-center text-center sm:text-left px-40">
+                <h1 className=" text-white text-2xl font-bold mt-16">
                     <span className=" text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-secondary-500">Hello, Im {" "}</span>
                         Bryan
                     <br/>
@@ -45,9 +45,11 @@ const HomeSection = () => {
                     Front End Developer who specializes in creating web applications and translating visual concepts into interactive user interfaces.
                 </p>
                 <div className=" flex flex-row gap-4 mt-12 ">
-                    <a href="/#contact-section" className=" w-full text-white sm:fit px-6 py-3 rounded-full bg-gradient-to-br from-middle-600 via-primary-600 to-secondary-600 hover:from-middle-500">
-                        Hire Me
-                    </a>
+                    <button className=" w-full text-white sm:fit px-6 py-3 rounded-full bg-gradient-to-br from-middle-600 via-primary-600 to-secondary-600 hover:from-middle-500">
+                        <a href="/#contact-section">
+                            Hire Me
+                        </a>
+                    </button>
                     <button className=" w-full sm:fit px-1 py-1 rounded-full bg-gradient-to-br from-middle-600 via-primary-600 to-secondary-600 hover:bg-gradient-to-br hover:from-middle-500">
                         <span className=" block bg-black hover:bg-gradient-to-br from-middle-600 via-primary-600 to-secondary-600 hover:from-blue-500 rounded-full px-5 py-2 text-white">
                             Download CV
@@ -55,11 +57,11 @@ const HomeSection = () => {
                     </button>
                 </div>
             </div>
-            <div className=" col-span-5 place-self-center mt-6">
+            <div className=" col-span-4 place-self-center mt-6 sm:pr-48 pr-2">
                 <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-900 to-transparent rounded-full relative w-[250px] h-[250px] sm:h-260 sm:w-260 lg:w-[270px] lg:h-[270px]">
                     <Image
                         className=" rounded-full absolute trasnform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                        src="/images/bryan.png"
+                        src="/images/bryan.jpg"
                         alt="my image"
                         height={300}
                         width={300}

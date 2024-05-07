@@ -29,8 +29,8 @@ const Navigation = () => {
 const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className=" fixed left-0 right-8 z-10 bg-slate-900 bg-opacity-90 w-full ">
-        <div className=" flex flex-wrap items-center justify-between mx-auto px-6 py-4">
+    <nav className=" fixed bg-slate-900 bg-opacity-90 w-screen">
+        <div className=" flex flex-wrap items-center justify-between mx-auto md:px-36 px-6 py-4">
             <Image
                 src="/images/logo.png"
                 height={150} 
