@@ -29,14 +29,17 @@ const Navigation = () => {
 const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className=" fixed bg-slate-900 bg-opacity-90 w-screen z-50">
-        <div className=" flex flex-wrap items-center justify-between mx-auto md:px-36 px-6 py-4">
-            <Image
+    <nav className=" fixed bg-white bg-opacity-90 w-screen z-50">
+        <div className=" flex flex-wrap items-center justify-between mx-36 md:px-4 px-6 py-8">
+            {/* <Image
                 src="/images/logo.png"
                 height={150} 
                 width={150} 
                 alt="computer setup"
-            />
+            /> */}
+            <h1 class=" text-blue text-xl font-bold">
+                Bry@w
+            </h1>
             <div className=" mobile-menu block md:hidden">
                 {
                     !navbarOpen ? (
@@ -51,7 +54,7 @@ const [navbarOpen, setNavbarOpen] = useState(false);
                 }
             </div>
             <div className="menu hidden md:block md:w-auto" id="navbar">
-                <ul className=" flex p-4 md:p-0 md:flex-row mdspace-x-8 mt-0 gap-8 mr-16">
+                <ul className=" flex md:p-0 md:flex-row mdspace-x-8 mt-0 gap-10">
                     {
                         NavigationLinks.map((link, index) => (
                             <li key={index}>
