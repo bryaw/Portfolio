@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const TabButton = ({ active, selectTab, children}) => {
     
-  const buttonClasses = active ? ' text-white' : 'text-[ADB7BE] ';
+  const buttonClasses = active ? ' font-semibold text-blue' : '';
 
   const variants = {
     default: { width: 0 },
@@ -12,13 +12,13 @@ const TabButton = ({ active, selectTab, children}) => {
 
   return (
     <button onClick={selectTab}>
-        <p className={` text-white hover:font-semibold ${buttonClasses} `}>
+        <p className={` text-blue font-medium hover:font-semibold ${buttonClasses} `}>
             {children}
         </p>
         <motion.div
           animate={ active ? "active" : "default"}
           variants={variants}
-          className=" h-1 bg-primary-500 rounded mt-2"
+          className=" h-1 bg-hoverblue rounded mt-2"
         ></motion.div>
     </button>
   )

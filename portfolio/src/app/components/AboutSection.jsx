@@ -75,13 +75,13 @@ const AboutSection = () => {
   return (
     <section 
         id="about-section" 
-        className=" px-12 py-10 text-white"
+        className=" px-36 py-20 text-white"
     >
         <motion.div
             initial={{ opacity: 0, scale: 1}}
             animate={{ opacity: 1, scale: 1}}
             transition={{ duration: 0.5}}
-            className=" md:grid md:grid-cols-2 gap-10 items-center py-16 px-4 xl:gap-16 sm:py-16 xl:px-16"
+            className=" md:grid md:grid-cols-2 gap-10 items-center py-16 px-4 xl:gap-28 sm:py-16"
         >
             <div className=" h-full flex items-center justify-center">
                 <Image
@@ -90,7 +90,7 @@ const AboutSection = () => {
                     data-aos-offset="200" 
                     data-aos-delay="50" 
                     data-aos-duration="1000"
-                    src="/images/about.jpg" 
+                    src="/images/languages.png" 
                     height={500} 
                     width={500} 
                     alt="computer setup"
@@ -103,10 +103,10 @@ const AboutSection = () => {
                 data-aos-delay="50" 
                 data-aos-duration="1000"
             >
-                <h2 className=" text-4xl font-bold mb-4 text-white mt-4">
+                <h2 className=" text-4xl font-bold mb-4 text-blue mt-4">
                     About Me
                 </h2>
-                <p className=" text-sm text-[#ADB7BE]">
+                <p className=" text-textslate text-sm sm:text-small lg:text-base">
                     I'm passionate about crafting intuitive and visually appealing digital experiences. I thrive on turning ideas into responsive websites and applications using Javascript and Frameworks.
                 </p>
                 <div className=" flex flex-row mt-8 gap-4">
@@ -126,8 +126,10 @@ const AboutSection = () => {
                             Education
                     </TabButton>
                 </div>
-                <div className=" mt-8">
-                    {TAB_DATA.find((t) => t.id === tab).content}
+                <div className=" mt-4">
+                    <p class=" text-textslate text-sm sm:text-small lg:text-base">
+                        {TAB_DATA.find((t) => t.id === tab).content}
+                    </p>
                 </div>
             </div>
         </motion.div>
