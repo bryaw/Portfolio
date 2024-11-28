@@ -42,23 +42,23 @@ const TAB_DATA = [
             />
         )
     },
-    {
-        title: "Education",
-        id: "education",
-        content: (
-            <TypeAnimation
-                style={{ whiteSpace: 'pre-line', height: '195px', display: 'block' }}
-                sequence={[
-                    '- Web Development',
-                    2000,
-                ]}
-                wrapper="span"
-                speed={70}
-                cursor={false}
-                repeat={Infinity}
-            />
-        )
-    }
+    // {
+    //     title: "Education",
+    //     id: "education",
+    //     content: (
+    //         <TypeAnimation
+    //             style={{ whiteSpace: 'pre-line', height: '195px', display: 'block' }}
+    //             sequence={[
+    //                 '- Web Development',
+    //                 2000,
+    //             ]}
+    //             wrapper="span"
+    //             speed={70}
+    //             cursor={false}
+    //             repeat={Infinity}
+    //         />
+    //     )
+    // }
 ];
 
 const AboutSection = () => {
@@ -120,14 +120,14 @@ const AboutSection = () => {
                         active={tab === "experience"}>
                             Experience
                     </TabButton>
-                    <TabButton 
+                    {/* <TabButton 
                         selectTab={() => handleTabChange("education")} 
                         active={tab === "education"}>
                             Education
-                    </TabButton>
+                    </TabButton> */}
                 </div>
                 <div className=" mt-4">
-                    <p class=" text-textslate text-sm sm:text-small lg:text-base">
+                    <p className=" text-textslate text-sm sm:text-small lg:text-base">
                         {TAB_DATA.find((t) => t.id === tab).content}
                     </p>
                 </div>

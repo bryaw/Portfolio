@@ -1,6 +1,7 @@
 "use client"
 // import Link from "next/link";
 import React, {useState} from 'react';
+import { useRouter } from "next/navigation";
 import NavigationLink from "./NavigationLink";
 import MenuOverlay from "./MenuOverlay";
 import Image from 'next/image';
@@ -27,6 +28,7 @@ const NavigationLinks = [
 const Navigation = () => {
 
 const [navbarOpen, setNavbarOpen] = useState(false);
+const router = useRouter();
 
   return (
     <nav className=" fixed bg-white bg-opacity-90 w-screen z-50">
@@ -37,7 +39,7 @@ const [navbarOpen, setNavbarOpen] = useState(false);
                 width={150} 
                 alt="computer setup"
             /> */}
-            <h1 class=" text-blue text-xl font-bold">
+            <h1 className=" text-blue text-xl font-bold">
                 Bry@w
             </h1>
             <div className=" mobile-menu block md:hidden">
@@ -60,7 +62,8 @@ const [navbarOpen, setNavbarOpen] = useState(false);
                             <li key={index}>
                                 <NavigationLink 
                                     href={link.path} 
-                                    title={link.title} 
+                                    title={link.title}
+                                    isSelected={router.asPath === link.path}
                                 />
                             </li>
                         ))

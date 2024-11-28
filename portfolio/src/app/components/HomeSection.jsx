@@ -30,7 +30,7 @@ const HomeSection = () => {
                         Bryan
                     <br/>
                 </h1>
-                <h1 class="text-hoverblue text-5xl font-bold mt-6">
+                <h1 className="text-hoverblue text-5xl font-bold mt-6">
                     <TypeAnimation
                         sequence={[
                             'Frontend Developer',
@@ -44,7 +44,7 @@ const HomeSection = () => {
                         repeat={Infinity}
                     />
                 </h1>
-                <div class=" w-11/12">
+                <div className=" w-11/12">
                     <p className=" text-textslate text-sm sm:text-base lg:text-lg font-medium mt-10 mb-16">
                         Front End Developer who specializes in creating web applications and translating visual concepts into interactive user interfaces.
                     </p>
@@ -63,7 +63,7 @@ const HomeSection = () => {
                 </div>
             </div>
             <div className=" col-span-4 place-self-center mt-6 sm:pr-48 pr-2 relative">
-                <div class=" absolute bg-transparent top-0 -left-28 justify-center items-left">
+                <div className=" absolute bg-transparent top-0 -left-28 justify-center items-left">
                     <svg xmlns="http://www.w3.org/2000/svg" width="480px" height="480px" viewBox="0 0 24 24">
                         <g>
                             <circle cx="12" cy="3" r="1" fill="#dbeafe">
