@@ -50,16 +50,16 @@ const HomeSection = () => {
                     </p>
                 </div>
                 <div className=" flex w-9/12 flex-row gap-4 mt-18 ">
-                    <button className=" w-full text-white sm:fit px-6 py-3 rounded-full bg-blue hover:bg-hoverbutton">
+                    <button className=" w-6/12 text-white sm:fit px-6 py-3 rounded-full bg-blue hover:bg-hoverbutton">
                         <a href="/#contact-section">
                             Hire Me
                         </a>
                     </button>
-                    <button className=" w-full sm:fit px-1 py-1 rounded-full bg-disable hover:bg-hoverbutton">
+                    {/* <button className=" w-full sm:fit px-1 py-1 rounded-full bg-disable hover:bg-hoverbutton">
                         <span>
                             Download CV
                         </span>
-                    </button>
+                    </button> */}
                 </div>
             </div>
             <div className=" col-span-4 place-self-center mt-6 sm:pr-48 pr-2 relative">
