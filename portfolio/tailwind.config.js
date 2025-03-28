@@ -21,7 +21,7 @@ module.exports = {
       primary: colors.purple,
       secondary: colors.pink,
       middle: colors.blue,
-      textslate: '#475569',
+      textslate: '#CFCFCF',
       blue: '#1e3a8a',
       hoverblue: '#3b82f6',
       hoverbutton: '#1d4ed8',

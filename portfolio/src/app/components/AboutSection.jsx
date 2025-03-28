@@ -14,7 +14,7 @@ const TAB_DATA = [
                 <TypeAnimation
                     style={{ whiteSpace: 'pre-line', height: '195px', display: 'block' }}
                     sequence={[
-                        '- Javascript \n- Next Js \n- Vue Js \n- React Native \n- PHP \n- Tailwind CSS \n- HTML/CSS',
+                        '- Javascript \n- Next Js \n- Vue Js \n- Nuxt Js \n- React Native \n- PHP \n- Laravel \n- Tailwind CSS \n- Bootstrap \n- HTML/CSS',
                         2000,
                     ]}
                     wrapper="span"
@@ -77,10 +77,7 @@ const AboutSection = () => {
         id="about-section" 
         className=" px-36 py-20 text-white"
     >
-        <motion.div
-            initial={{ opacity: 0, scale: 1}}
-            animate={{ opacity: 1, scale: 1}}
-            transition={{ duration: 0.5}}
+        <div
             className=" md:grid md:grid-cols-2 gap-10 items-center py-16 px-4 xl:gap-28 sm:py-16"
         >
             <div className=" h-full flex items-center justify-center">
@@ -132,7 +129,7 @@ const AboutSection = () => {
                     </p>
                 </div>
             </div>
-        </motion.div>
+        </div>
     </section>
   )
 }

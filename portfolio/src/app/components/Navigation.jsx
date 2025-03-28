@@ -31,7 +31,7 @@ const [navbarOpen, setNavbarOpen] = useState(false);
 const router = useRouter();
 
   return (
-    <nav className=" fixed bg-white bg-opacity-90 w-screen z-50">
+    <nav className=" fixed bg-gray-900 bg-opacity-90 w-screen z-50">
         <div className=" flex flex-wrap items-center justify-between mx-36 md:px-4 px-6 py-8">
             {/* <Image
                 src="/images/logo.png"
